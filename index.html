@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Check-Out Form</title>
+    <link href="./PUBLIC/CSS/CheckOutForm.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="header">
+    <h1>Checkout</h1> <br><br>
+    </div>
+    <form>
+        <hr>
+        <div id="pi">
+        <h3>Personal Information</h3>
+        <hr>
+        <label for="firstname">Firstname</label>
+        <input type="text" name="firstname" id="firstname" autocomplete="off"> <!--Firstname-->
+        <label for="lastname">Lastname</label>
+        <input type="text" name="lastname" id="lastname" autocomplete="off"> <!--Lastname-->
+        <label for="email">E-mail</label>
+        <input type="text" name="email" id="email"> <!--Email-->
+        <label for="phone">Phone Number</label>
+        <input type="number" name="phone" id="phone" autocomplete="off"> <!--Phone Number-->
+        </div>
+        <hr>
+        <div id="bi">
+        <h3>Billing Information</h3>
+        <hr>
+        <label for="address1">Address</label>
+        <input type="text" name="address1" id="address1" autocomplete="off"> <!--Address-->
+        <label for="address2">Address 2</label>
+        <input type="text" name="address2" id="address2" autocomplete="off" placeholder="(optional)"> <!--Address 2-->
+        <label for="city">City</label>
+        <input type="text" name="city" id="city" autocomplete="off"> <!--City-->
+        <label for="postalcode">Postal Code</label>
+        <input type="number" name="postalcode" id="postalcode" autocomplete="off"> <!--Postal Code-->
+        <label for="country">Country</label>
+        <input list="country">
+        <datalist id="country">
+            <option value="United States">
+            <option value="United Kingdom">
+            <option value="China">
+            <option value="India">
+            <option value="Germany">
+            <option value="Japan">
+            <option value="France"> 
+            <option value="Italy">  
+            <option value="Brazil">
+            <option value="Canada">
+        </datalist> <!--Country-->
+        <label for="region">Region/State</label>
+        <input type="text" name="region" id=region autocomplete="off" placeholder="(optional)"><!--Region-->
+        </div>
+        <hr>
+        <div id="si">
+        <h3>Shipping Information</h3>
+        <hr>
+        <label for="shipping">Ship to Billing Address</label>
+        <input type="radio" name="shipping" value="yes">Yes
+        <input type="radio" name="shipping" value="no">No <!--Ship to Billing?-->
+        <label for="address1">Address</label>
+        <input type="text" name="address1" id="address1" autocomplete="off"> <!--Address-->
+        <label for="address2">Address 2</label>
+        <input type="text" name="address2" id="address2" autocomplete="off" placeholder="(optional)"> <!--Address 2-->
+        <label for="city">City</label>
+        <input type="text" name="city" id="city" autocomplete="off"> <!--City-->
+        <label for="postalcode">Postal Code</label>
+        <input type="number" name="postalcode" id="postalcode" autocomplete="off"> <!--Postal Code-->
+        <label for="country">Country</label>
+        <input list="country">
+        <datalist id="country">
+            <option value="United States">
+            <option value="United Kingdom">
+            <option value="China">
+            <option value="India">
+            <option value="Germany">
+            <option value="Japan">
+            <option value="France"> 
+            <option value="Italy">  
+            <option value="Brazil">
+            <option value="Canada">
+        </datalist> <!--Country-->
+        <label for="region">Region/State</label>
+        <input type="text" name="region" id=region autocomplete="off" placeholder="(optional)"> <br><br><!--Region-->
+        <hr>
+        <label for="shippingmethod">Shipping Method</label>
+        <select name="shippingmethod">
+            <option value="nothing">Ship to the US</option>
+            <option value="standard">Standard Shipping (5-7 days - FREE)</option>
+            <option value="priority">Priority Shipping (2-4 days - 11$)</option>
+            <option value="express">Express Shipping (1 day - 25$)</option>
+        </select>
+        <select name="shippingmethod">
+            <option value="nothing">Ship Internationally</option>
+            <option value="firstclass">First-Class Shipping (7-21 days - 10$)</option>
+            <option value="priority">Priority Shipping (6-10 days - 25$)</option>
+            <option value="express">Express Shipping (3-5 days - 45$)</option>
+        </select>
+        <label for="info">Additional Instructions</label>
+        <textarea rows="5" cols="40" id="info" autocomplete="off" placeholder="(optional)"></textarea> <br>
+        <input type="checkbox" name="ads">I would like to receive a newsletter <br>
+        <input type="checkbox" name="tAndC">I agree with the <a href="#" id="tAndC">Terms and Conditions</a>
+        </div>
+        <hr>
+        <div id="pm">
+        <h3>Payment Method</h3>
+        <hr>
+        <button><a>Credit Card</a></button>
+        <button><a>PayPal</a></button>
+        </div>
+    </form>
+</body>
+</html>

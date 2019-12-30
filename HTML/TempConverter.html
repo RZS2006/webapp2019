@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../PUBLIC/CSS/convertor.css">
+    </head>
+    <body>
+        <div id="content">
+          <header>
+              <div id="logo">
+                  <img src="https://cdn2.iconfinder.com/data/icons/financial-44/34/67-512.png" alt="logo">
+                  <h4>Random Calculator</h4>
+              </div>
+              <div id="title">
+                  <h4>Temperature Convertor</h4>
+              </div>
+              <div id="more">
+                  <div>
+                      More
+                  </div>
+              </div>
+          </header>
+          <div id="calculator">
+          <div id="select">
+          <select name="dropdown" id="dropdown">
+              <option value="Celsius">Celsius</option>
+              <option value="Fahrenheit">Fahrenheit</option>
+              <option value="Kelvin">Kelvin</option>
+          </select>
+          <input type="number" name="input" id="input" placeholder="Input here">
+          <div>
+          <div id="btn">
+          <button id="convert" onclick="convert()">Convert</button>
+          <button id="reset" onclick="reset()">Reset</button>
+          </div>
+          <div id="answers">
+          <p id="result1"></p>
+          <p id="result2"></p>
+          </div>
+        </div>
+        </div>
+    </body>
+    <script src="../PUBLIC/JS/convertor.js"></script>
+</html>
