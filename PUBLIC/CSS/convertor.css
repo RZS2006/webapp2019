@@ -16,6 +16,8 @@ body {
     background-color: white;
 }
 
+/*header*/
+
 header {
     width: 100%;
     min-height: 80px;
@@ -62,12 +64,12 @@ header {
     border-radius: 3px;
 }
 
-#more {
+#back {
     flex: 1;
     justify-content: flex-end;
 }
 
-#more div {
+#back div {
     border: black 1px solid;
     margin-right: 10px;
     padding: 5px;
@@ -79,65 +81,62 @@ header {
     border-radius: 3px;
 }
 
-#more div:hover {
+#back div:hover {
     background-color: black;
     color: white;
     transition: 0.2s;
     cursor: pointer;
 }
 
-#calculator {
+/*main*/
+
+main {
     width: 100%;
-    margin: 40px 10px;
+    margin-top: 60px;
 }
 
-#select {
+
+#select, #btn, #answers{
     width: 100%;
     display: flex;
+    margin: auto;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+
 select, input {
-    width: 80%;
-    margin: 10px auto;
+    width: 70%;
+    margin: 15px auto;
     height: 40px;
-    font-size: 15px;
-    padding: 5px;
-    box-sizing: border-box;
-    border:rgb(24, 24, 24) 1px solid;
-    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    border: black 1px solid;
+    border-radius: 3px;
 }
 
 input {
-    transition: 0.5s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 input:focus {
-    width: 90%;
-    border: green 2px solid;
-    transition: 0.5s ease-in-out;
-}
-
-#btn {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 80%;
+    border: green 1px solid;
+    transition: 0.4s ease-in-out;
 }
 
 button {
     width: 200px;
     height: 40px;
-    margin: 20px;
-    font-size: 15px;
+    margin: 15px;
+    font-size: 16px;
     background-color: white;
-    border-radius: 5px; 
+    border-radius: 3px;
 }
 
 button:hover {
     color: white;
-    transition: 0.5s;
+    transition: 0.4s;
 }
 
 #convert {
@@ -156,55 +155,32 @@ button:hover {
     background-color: red;
 }
 
-#answers {
-    width: 65vw;
-    box-sizing: border-box;
-    min-height: 75px;
+#answer_con {
+    width: 63vw;
+    margin: 15px auto;
+    min-height: 90px;
     height: auto;
-    margin: 20px auto;
-    line-height: 30px;
-    padding: 5px;
-    box-sizing: border-box;
-    border: rgb(24, 24, 24) 1px solid;
+    line-height: 34px;
+    padding: 10px;
+    border: black 1px solid;
     background-color: white;
-    border-radius: 5px; 
+    border-radius: 4px; 
 }
 
-a {
-    text-decoration: none;
-    color: rgb(24, 24, 24);
-}
-
-@media only screen and (max-width: 800px) {
-    #content {
-        width: 90%;
-    }
+@media screen and (max-width: 800px) {
 
     header {
         display: block;
-        height: 200px;
+        height: auto;
     }
 
-    #logo {
+    #logo, #title, #back{
         width: 100%;
         justify-content: center;
         margin: 20px auto;
     }
 
-    #title {
-        width: 100%;
-        margin: 10px 0;
-        box-sizing: border-box;
-    }
-
-    #more {
-        width: 100%;
-        margin: 0;
-        justify-content: center;
-    }
-
-    #more div {
+    #back div {
         margin: 0 auto;
-        float: none;
     }
 }

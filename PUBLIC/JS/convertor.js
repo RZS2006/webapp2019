@@ -13,27 +13,27 @@ function convert() {
     
     if (format === "Celsius") {
     result1 = input * 9/5 + 32
-    result2 = input + 273.15
+    result2 = input + (273.15 * 10 / 10)
     label1 = "Fahrenheit"
     label2 = "Kelvin"
     }
     
     if (format === "Fahrenheit") {
     result1 = (input - 32) * (9/5)
-    result2 = result1 + 273.15
+    result2 = result1 + (273.15 * 10 / 10)
     label1 = "Celsius"
     label2 = "Kelvin"
     }
     
     if (format === "Kelvin") {
-    result1 = input - 273.15
+    result1 = input - (273.15 * 10 / 10)
     result2 = result1 * 9/5 + 32
     label1 = "Celsius"
     label2 = "Fahreheit"
     }
     
-    document.getElementById("result1").innerHTML = `${input} ${format} = ${result1} ${label1}`
-    document.getElementById("result2").innerHTML = `${input} ${format} = ${result2} ${label2}`
+    document.getElementById("result1").innerHTML = `${input.toString()} ${format} = ${result1.toString()} ${label1}`
+    document.getElementById("result2").innerHTML = `${input.toString()} ${format} = ${result2.toString()} ${label2}`
     }
 }
 
