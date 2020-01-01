@@ -56,6 +56,7 @@ nav {
     align-self: center;
     margin: 10px;
     padding-bottom: 5px;
+    font-weight: 100;
 }
 
 .nav-link:hover {
@@ -77,10 +78,58 @@ a {
     padding: 10px;
     border: black 1px solid;
     cursor: pointer;
+    font: 100;
 }
 
 .account-btn:hover {
     background-color: black;
     color: white;
+    transition: 0.2s;
+}
+
+.introduction img {
+    height: 650px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    filter: brightness(70%);
+}
+
+.intro-content {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-text {
+    font-size: 60px;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 50%;
+    color:white;
+}
+
+.intro-btn {
+    border: 1px white solid;
+    color: white;
+    font-size: 25px;
+    padding: 5px;
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    text-align: center;
+    line-height: 50px;
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.intro-btn:hover {
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    border: 1px black solid;
     transition: 0.2s;
 }
