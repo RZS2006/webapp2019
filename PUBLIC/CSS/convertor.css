@@ -26,7 +26,7 @@ header {
     align-items: center;
 }
 
-#logo, #title, #more {
+#logo, #title, #back {
     display: flex;
     height: 40px;
 }
@@ -103,7 +103,6 @@ main {
     justify-content: center;
     flex-wrap: wrap;
 }
-
 
 select, input {
     width: 70%;
