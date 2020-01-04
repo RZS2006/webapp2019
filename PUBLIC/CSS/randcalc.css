@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(to bottom right, rgb(250, 250, 250), rgb(220, 220, 220));
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(230, 230, 230));
 }
 
 button {
@@ -61,7 +61,7 @@ nav {
 .logo-container h4 {
     font-size: 1.8rem;
     font-weight: 300;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin-left: 10px;
 }
 
@@ -125,8 +125,7 @@ nav {
 
 .intro-container{
     width: 60%;
-    padding-top: 100px;
-    padding-left: 40px;
+    padding: 100px 40px;
 }
 
 #introduction h4 {
@@ -148,7 +147,7 @@ nav {
 #intro-btn {
     border: 1px white solid;
     color: white;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 2rem;
     margin-top: 20px;
     background-color: transparent;
@@ -168,30 +167,35 @@ nav {
 
 /*Description Section*/
 
-.desc-title {
-    width: 100%;;
-    margin: 20px 0;
-    letter-spacing: 1px;
-    font-size: 1.8rem;
-    text-align: center;
-}
-
-.desc-title h4 {
-    font-weight: 100;
-}
-
-.desc-content {
+.section-title {
     width: 100%;
-    margin: 40px 0;
+    margin: 80px 0 40px 0;
+    text-align: center;  
+}
+
+.section-title h4 {
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+}
+
+.section-title h4 span {
+    font-weight: 500;
+    font-size: 3.6rem;
+}
+
+.desc-container {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .desc-item {
-    width: 25%;
+    width: 40%;
     margin: 20px;
-    min-width: 200px;
+    min-width: 280px;
     padding: 15px;
     height: 300px;
     border: black 1px solid;
@@ -225,6 +229,8 @@ nav {
     border-bottom: white 1px solid;
     transition: 0.2s;
 }
+
+/*Showcase Section*/
 
 .show-title {
     width: 100%;;
@@ -362,6 +368,9 @@ footer ul li {
 }
 
 @media screen and (max-width: 768px) {
+
+    /*Header Media Query*/
+
     header, header .container{
         display: block;
         height: auto;
@@ -373,9 +382,16 @@ footer ul li {
         width: 100%;
         margin: 15px auto;
     } 
+
+    .logo-container img {
+        margin: 0;
+    }
+
     #account-btn {
         margin: 0 auto;
     }
+
+    /*Introduction Section Media Query*/
 
     .intro-container {
         width: 100%;
@@ -385,5 +401,11 @@ footer ul li {
 
     #introduction h4, #introduction p {
         text-align: center;
+    }
+
+    /*Description Section Media Query*/
+
+    .desc-item {
+        width: 100%;
     }
 }
