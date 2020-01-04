@@ -13,20 +13,20 @@ function convert() {
     
     if (format === "Celsius") {
     result1 = input * 9/5 + 32
-    result2 = input + (273.15 * 10 / 10)
+    result2 = input + ((273.15 * 10) / 10)
     label1 = "Fahrenheit"
     label2 = "Kelvin"
     }
     
     if (format === "Fahrenheit") {
     result1 = (input - 32) * (9/5)
-    result2 = result1 + (273.15 * 10 / 10)
+    result2 = result1 + ((273.15 * 10) / 10)
     label1 = "Celsius"
     label2 = "Kelvin"
     }
     
     if (format === "Kelvin") {
-    result1 = input - (273.15 * 10 / 10)
+    result1 = input - ((273.15 * 10) / 10)
     result2 = result1 * 9/5 + 32
     label1 = "Celsius"
     label2 = "Fahreheit"
