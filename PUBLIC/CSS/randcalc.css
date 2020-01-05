@@ -120,7 +120,7 @@ nav {
     background-size: cover;
     background-position: center;
     height: 88vh;
-    min-height: 400px;
+    min-height: 440px;
 }
 
 .intro-container{
@@ -176,13 +176,13 @@ nav {
 .section-title h4 {
     letter-spacing: 2px;
     font-weight: 300;
-    font-size: 3.6rem;
+    font-size: 4rem;
     text-transform: uppercase;
 }
 
 .section-title h4 span {
     font-weight: 500;
-    font-size: 3.6rem;
+    font-size: 4rem;
 }
 
 .desc-container {
@@ -196,38 +196,33 @@ nav {
     width: 40%;
     margin: 20px;
     min-width: 280px;
-    padding: 15px;
-    height: 300px;
-    border: black 1px solid;
+    padding: 20px;
+    height: 320px;
     background-color: white;
+    box-shadow: 5px 5px 20px rgba(20, 20, 20, 0.2);
 }
 
 .desc-item h4 {
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 8px;
     text-align: center;
-    font-size: 1.5rem;
-    font-weight: 100;
+    font-size: 2.4rem;
+    font-weight: 300;
     padding: 10px;
-    border-bottom: 1px solid black;
-    
+    border-bottom: 1px solid black; 
 }
 
 .desc-item p {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-top: 20px;
 }
 
-.desc-item:hover {
-    background-color: black;
-    color: white;
-    transition: 0.2s;
-}
-
-.desc-item:hover h4 {
-    border-bottom: white 1px solid;
-    transition: 0.2s;
+.desc-item img {
+    display: block;
+    width: 25%;
+    min-width: 100px;
+    margin: 20px auto;
 }
 
 /*Showcase Section*/
@@ -407,5 +402,13 @@ footer ul li {
 
     .desc-item {
         width: 100%;
+    }
+
+    .section-title {
+        margin: 40px 0 20px 0;
+    }
+
+    .section-title h4, .section-title h4 span {
+        font-size: 3rem;
     }
 }
