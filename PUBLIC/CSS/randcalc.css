@@ -7,19 +7,23 @@
     font-size: 10px;
 }
 
-body {
+body, button {
     font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(230, 230, 230));
 }
 
-button {
-    font-family: 'Roboto', sans-serif;;
+body {
+    background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(230, 230, 230));
 }
 
 .container {
     width: 90%;
     height: inherit;
     margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /*Header*/
@@ -41,16 +45,12 @@ header .container {
     height: 40px;
 }
 
-.logo-container {
+.logo-container, .account-container {
     flex: 1;
 }
 
 nav {
     flex: 2;
-}
-
-.account-container {
-    flex: 1;
 }
 
 .logo-container img {
@@ -83,8 +83,6 @@ nav {
 .nav-link a {
     font-weight: 300;
     font-size: 1.6rem;
-    text-decoration: none;
-    color: black;
 }
 
 #current {
@@ -202,11 +200,16 @@ nav {
     box-shadow: 5px 5px 20px rgba(20, 20, 20, 0.2);
 }
 
+.desc-item:hover {
+    box-shadow: 10px 10px 40px rgba(20, 20, 20, 0.4);
+    transition: 0.4s;
+}
+
 .desc-item h4 {
     text-transform: uppercase;
     letter-spacing: 8px;
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     font-weight: 300;
     padding: 10px;
     border-bottom: 1px solid black; 
@@ -227,76 +230,88 @@ nav {
 
 /*Showcase Section*/
 
-.show-title {
-    width: 100%;;
-    margin: 20px 0;
-    letter-spacing: 1px;
-    font-size: 1.8rem;
-    text-align: center;
-}
-
-.show-title h4 {
-    font-weight: 100;
-}
-
-.show-content {
+.show-container {
     width: 100%;
-    margin: 40px 0;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .show-item {
-    width: 45%;
+    width: 40%;
     margin: 20px;
-    min-width: 200px;
-    padding: 15px;
-    height: 300px;
-    color: white;
-    border: black 1px solid;
-    background-color:black;
+    min-width: 280px;
+    padding: 20px;
+    text-align: center;
+    height: 400px;
+    background-color: white;
+    box-shadow: 5px 5px 20px rgba(20, 20, 20, 0.2);
+}
+
+.show-item img {
+    display: block;
+    max-height: 25%;
+    max-width: 40%;
+    margin: 20px auto;
+}
+
+.show-item h4 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 10px auto;
+    font-weight: 500;
+}
+
+.show-item p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-align: center;
 }
 
 .show-item button {
-    margin-top: 100px;
-    width: 100%;
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    min-width: 180px;
+    max-width: 260px;
     height: 50px;
-    font-size: 1.5rem;
+    text-decoration: none;
+    font-size: 1.8rem;
+    cursor: pointer;
     background-color: transparent;
-    color: white;
-    border: white 1px solid;
+    color: black;
+    border: black 1px solid;
 }
 
 .show-item button:hover {
-    background-color: white;
-    color: black;
-    opacity: 0.8;
+    background-color: black;
+    color: white;
     transition: 0.2s;
 }
 
-.extra-button {
+.show-btn {
     display: flex;
     justify-content: center;
     margin: 20px 0;
 }
 
-.extra-button button {
-    width: 200px;
-    height: 50px;
-    font-size: 1.2rem;
-    padding: 10px;
-    background-color: white;
+.show-btn button {
+    width: 240px;
+    height: 60px;
+    font-size: 2rem;
+    background-color: transparent;
     border: black 1px solid;
     cursor: pointer;
-    font-size: 100;
+    font-size: 300;
 }
 
-.extra-button button:hover {
+.show-btn button:hover {
     background-color: black;
     color: white;
     transition: 0.2s;
 }
+
+/*Sign-up Section*/
 
 .sign-up {
     background-image: url(../IMAGE/river-pic.jpg);
@@ -332,6 +347,8 @@ nav {
     transition: 0.2s;
     opacity: 0.8;
 }
+
+/*Footer*/
 
 .footer-content {
     width: 90%;
@@ -409,6 +426,13 @@ footer ul li {
     }
 
     .section-title h4, .section-title h4 span {
-        font-size: 3rem;
+        font-size: 3.4rem;
+    } 
+
+    /*Showcase Section Media Query*/
+
+    .show-item {
+        width: 100%;
+        margin: 20px auto;
     }
 }
