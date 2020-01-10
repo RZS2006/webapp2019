@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    height: inherit;
+    margin: 0 auto;
+}
+
+header {
+    height: 80px;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+}
+
+.logo-container, .title-container, .back-container {
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.title-container {
+    flex: 2;
+}
+
+.back-container {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.logo-container img {
+    height: inherit;
+    margin-left: 10px;
+}
+
+.logo-container h4 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-left: 10px;
+}
+
+.title-container h4 {
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    border-bottom: black 2px solid;
+}
+
+.back-container button{
+    border: black 1px solid;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 2rem;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+}
+
+.back-container button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+
+    header, header .container {
+        display: block;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .logo-container, .title-container, .back-container{
+        width: 100%;
+        justify-content: center;
+        margin: 20px auto;
+    }
+
+    .back-container button{
+        margin: 0 auto;
+    }
+}
