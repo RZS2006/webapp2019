@@ -6,7 +6,11 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    background-color: rgb(250, 250, 250);
+}
+
+body, button, input, select {
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .container {
@@ -17,7 +21,6 @@ body {
 
 header {
     height: 80px;
-    align-items: center;
     background-color: rgb(240, 240, 240);
 }
 
@@ -51,16 +54,17 @@ header .container{
 }
 
 .logo-container h4 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 300;
+    font-family: Arial, sans-serif;
     letter-spacing: 2px;
     margin-left: 10px;
 }
 
 .title-container h4 {
     margin: 0 auto;
-    font-weight: 300;
     font-size: 3rem;
+    text-transform: uppercase;
     letter-spacing: 2px;
     border-bottom: black 2px solid;
 }
@@ -71,10 +75,9 @@ header .container{
     padding: 5px;
     font-size: 2rem;
     height: 40px;
-    width: 80px;
-    text-align: center;
+    width: 100px;
     cursor: pointer;
-    background-color: white;
+    background-color: transparent;
 }
 
 .back-container button:hover {
@@ -83,12 +86,91 @@ header .container{
     transition: 0.2s;
 }
 
+.heading {
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.input, .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+select, input {
+    width: 70%;
+    min-width: 260px;
+    margin: 15px auto;
+    height: 40px;
+    font-size: 1.6rem;
+    padding: 5px 10px;
+    border: black 1px solid;
+    border-radius: 3px;
+}
+
+select option {
+    font-size: 1.6rem;
+}
+
+input:focus {
+    width: 80%;
+    transition: 0.5s;
+    border: green 1px solid;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    font-size: 1.8rem;
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+button:hover {
+    color: white;
+    transition: 0.2s;
+}
+
+#calculate {
+    border: green 1px solid;
+}
+
+#calculate:hover {
+    background-color: green;
+}
+
+#reset {
+    border: red 1px solid;
+}
+
+#reset:hover {
+    background-color: red;
+}
+
+.output {
+    margin: 10px 0;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.output p {
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+
 @media screen and (max-width: 768px) {
 
     header, header .container {
         display: block;
         height: auto;
-        padding: 20px 0;
+        padding: 10px 0;
     }
 
     .logo-container, .title-container, .back-container{
