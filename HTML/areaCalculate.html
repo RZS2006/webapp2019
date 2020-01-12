@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../PUBLIC/CSS/areaCalculate.css">
-    <script src="../PUBLIC/JS/areaCalculate.js"></script>
-    <title>Area Calculator</title>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="../PUBLIC/IMAGE/randcalc-logo.png" alt="logo">
-                <h4>Random Calculator</h4>
+    <html>
+    <head>
+        <title>Area Calculator</title>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../PUBLIC/CSS/areaCalculate.css">
+    </head>
+    <body onload="displayInput()">
+        <header>
+            <div class="container">
+                <div class="logo-container">
+                    <img src="../PUBLIC/IMAGE/randcalc-logo.png" alt="logo">
+                    <h4>Random Calculator</h4>
+                </div>
+                <div class="title-container">
+                    <h4>Area Calculator</h4>
+                </div>
+                <div class="back-container">
+                    <a href="randcalc.html"><button>Back</button></a>
+                </div>
             </div>
-            <div class="title-container">
-                <h4>Area Calculator</h4>
-            </div>
-            <div class="back-container">
-                <a href="randcalc.html"><button>Back</button></a>
-            </div>
-        </div>
-    </header>
+        </header>
 
     <main>
         <div class="container">
@@ -36,23 +32,25 @@
                 <option value="square">Square</option>
                 <option value="rect">Rectangle</option>
                 <option value="pent">Pentagon</option>
+                <option value="hex">Hexagon</option>
             </select>
 
             <input type="number" name="input1" id="input1" placeholder="">
-            <input type="number" name="input2" id="input1" placeholder="">
+            <input type="number" name="input2" id="input2" placeholder="">
             </div>
 
             <div class="buttons">
-            <button id="calculate">Calculate</button>
-            <button id="reset">Reset</button>
+            <button id="calculate" onclick="calculate()">Calculate</button>
+            <button id="reset" onclick="reset()">Reset</button>
             </div>
 
             <h4 class="heading">Output</h4>
 
             <div class="output">
-                <p id="answer">qwertyuio</p>
+                <p><span id="answer1"></span><span id="answernum"></span><span id="answer2"></span></p>
             </div>
         </div>
     </main>
 </body>
+<script src="../PUBLIC/JS/areaCalculate.js"></script>
 </html>

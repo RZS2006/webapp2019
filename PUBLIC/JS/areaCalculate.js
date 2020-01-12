@@ -1,14 +1,16 @@
 let select = document.getElementById("type");
 let input1 = document.getElementById("input1");
 let input2 = document.getElementById("input2");
-let answer = document.getElementById("answer");
+let answer1 = document.getElementById("answer1");
+let answer2 = document.getElementById("answer2");
+let answernum = document.getElementById("answernum");
 
 let output;
 
-const calculate = document.getElementById("calculate");
-const reset = document.getElementById("reset");
+let calculatebtn = document.getElementById("calculate");
+let resetbtn = document.getElementById("reset");
 
-select.addEventListener("change", displayInput());
+select.addEventListener("change", displayInput);
 
 function displayInput() {
     if (select.value === "circle") {
@@ -17,8 +19,9 @@ function displayInput() {
     }
 
     if (select.value === "triangle") {
-        input1.placeholder = "Height"
-        input2.placeholder = "Base"
+        input1.placeholder = "Height";
+        input2.placeholder = "Base";
+        input2.classList.remove("hidden");
     }
 
     if (select.value === "square") {
@@ -29,21 +32,30 @@ function displayInput() {
     if (select.value === "rect") {
         input1.placeholder = "Length"
         input2.placeholder = "Width"
+        input2.classList.remove("hidden");
     }
 
     if (select.value === "pent") {
         input1.placeholder = "Side"
         input2.placeholder = "Apothem"
+        input2.classList.remove("hidden");
+    }
+
+    if (select.value === "hex") {
+        input1.placeholder = "Side"
+        input2.placeholder = "Apothem"
+        input2.classList.remove("hidden");
     }
 }
 
-calculate.addEventListener("click", calculate())
-
-const size1 = parseFloat(input1.value)
-const size2 = parseFloat(input1.value)
+calculatebtn.addEventListener("click", calculate())
 
 function calculate() {
-    if (isNaN(size1) || isNaN(size2)) {
+    const size1 = parseFloat(input1.value)
+    const size2 = parseFloat(input2.value)
+    if (isNaN(size1)) {
+        answer.innerHTML = "Please type in a number"
+    } else if (select.value !== "circle" && select.value !== "square" && isNaN(size2)) {
         answer.innerHTML = "Please type in a number"
     } else {
         if (select.value === "circle") {
@@ -51,7 +63,7 @@ function calculate() {
         }
 
         if (select.value === "triangle") {
-            output = size1 * size2 / 2;
+            output = (size1 * size2) / 2;
         }
 
         if (select.value === "square") {
@@ -63,17 +75,26 @@ function calculate() {
         }
 
         if (select.value === "pent") {
-            output = size1 * size2 / 2;
+            output = size1 * size2 / 2 * 5;
         }
 
-        answer.innerHTML = `Area: ${output} square units`
+        if (select.value === "hex") {
+            output = size1 * size2 / 2 * 6;
+        }
+
+        answernum.innerHTML = output;
+        answer1.innerHTML = "Area: "
+        answer2.innerHTML = " square units"
+        
     }
 }
 
-reset.addEventListener("click", reset)
+resetbtn.addEventListener("click", reset)
 
 function reset() {
-    input1.value = ""
-    input2.value = ""
-    answer = ""
+    input1.value = "";
+    input2.value = "";
+    answer1.innerHTML = "";
+    answer2.innerHTML = "";
+    answernum.innerHTML = "";
 }

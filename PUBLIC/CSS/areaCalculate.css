@@ -19,6 +19,8 @@ body, button, input, select {
     margin: 0 auto;
 }
 
+/*Header*/
+
 header {
     height: 80px;
     background-color: rgb(240, 240, 240);
@@ -85,6 +87,8 @@ header .container{
     color: white;
     transition: 0.2s;
 }
+
+/*Main*/
 
 .heading {
     font-size: 3rem;
@@ -157,9 +161,16 @@ button:hover {
     text-align: center;
 }
 
-.output p {
+#answer1, #answer2 {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#answernum {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .hidden {
