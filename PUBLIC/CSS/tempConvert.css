@@ -67,6 +67,7 @@ header .container{
     margin: 0 auto;
     font-size: 3rem;
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 2px;
     border-bottom: black 2px solid;
 }
@@ -88,54 +89,55 @@ header .container{
     transition: 0.2s;
 }
 
-/*main*/
+/*Main*/
 
-main {
-    width: 100%;
-    margin-top: 60px;
+.heading {
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
 }
 
-
-#select, #btn, #answers{
-    width: 100%;
+.input, .buttons {
     display: flex;
-    margin: auto;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 select, input {
     width: 70%;
+    min-width: 260px;
     margin: 15px auto;
     height: 40px;
-    font-size: 16px;
-    padding: 10px;
+    font-size: 1.6rem;
+    padding: 5px 10px;
     border: black 1px solid;
     border-radius: 3px;
 }
 
-input {
-    transition: 0.4s ease-in-out;
+select option {
+    font-size: 1.6rem;
 }
 
 input:focus {
     width: 80%;
+    transition: 0.5s;
     border: green 1px solid;
-    transition: 0.4s ease-in-out;
 }
 
 button {
     width: 200px;
     height: 40px;
-    margin: 15px;
-    font-size: 16px;
-    background-color: white;
+    margin: 10px;
+    font-size: 1.8rem;
+    background-color: transparent;
     border-radius: 3px;
 }
 
 button:hover {
     color: white;
-    transition: 0.4s;
+    transition: 0.2s;
 }
 
 #convert {
@@ -154,16 +156,22 @@ button:hover {
     background-color: red;
 }
 
-#answer_con {
-    width: 63vw;
-    margin: 15px auto;
-    min-height: 90px;
-    height: auto;
-    line-height: 34px;
-    padding: 10px;
-    border: black 1px solid;
-    background-color: white;
-    border-radius: 4px; 
+.output {
+    margin: 10px auto 60px auto;
+    width: 70%;
+    text-align: center;
+}
+
+#answer1, #answer2 {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#answernum1, #answernum2 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 @media screen and (max-width: 768px) {

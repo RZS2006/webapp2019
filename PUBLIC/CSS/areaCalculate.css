@@ -68,6 +68,7 @@ header .container{
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-align: center;
     border-bottom: black 2px solid;
 }
 

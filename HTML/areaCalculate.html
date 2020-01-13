@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html>
+<html>
     <head>
         <title>Area Calculator</title>
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">
@@ -21,36 +21,36 @@
             </div>
         </header>
 
-    <main>
-        <div class="container">
-            <h4 class="heading">Input</h4>
+        <main>
+            <div class="container">
+                <h4 class="heading">Input</h4>
 
-            <div class="input">
-            <select name="type" id="type">
-                <option value="circle">Circle</option>
-                <option value="triangle">Triangle</option>
-                <option value="square">Square</option>
-                <option value="rect">Rectangle</option>
-                <option value="pent">Pentagon</option>
-                <option value="hex">Hexagon</option>
-            </select>
+                <div class="input">
+                    <select id="type">
+                        <option value="circle">Circle</option>
+                        <option value="triangle">Triangle</option>
+                        <option value="square">Square</option>
+                        <option value="rect">Rectangle</option>
+                        <option value="pent">Pentagon</option>
+                        <option value="hex">Hexagon</option>
+                    </select>
 
-            <input type="number" name="input1" id="input1" placeholder="">
-            <input type="number" name="input2" id="input2" placeholder="">
+                    <input type="number" name="input1" id="input1" placeholder="">
+                    <input type="number" name="input2" id="input2" placeholder="">
+                </div>
+
+                <div class="buttons">
+                    <button id="calculate">Calculate</button>
+                    <button id="reset">Reset</button>
+                </div>
+
+                <h4 class="heading">Output</h4>
+
+                <div class="output">
+                    <p><span id="answer1"></span><span id="answernum"></span><span id="answer2"></span></p>
+                </div>
             </div>
-
-            <div class="buttons">
-            <button id="calculate" onclick="calculate()">Calculate</button>
-            <button id="reset" onclick="reset()">Reset</button>
-            </div>
-
-            <h4 class="heading">Output</h4>
-
-            <div class="output">
-                <p><span id="answer1"></span><span id="answernum"></span><span id="answer2"></span></p>
-            </div>
-        </div>
-    </main>
-</body>
+        </main>
+    </body>
 <script src="../PUBLIC/JS/areaCalculate.js"></script>
 </html>
