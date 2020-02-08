@@ -11,9 +11,9 @@ const allclearBtn = document.querySelector(".allclear")
 const backspaceBtn = document.querySelector(".backspace")
 const answerBtn = document.querySelector(".answer")
 
-let inputArr = []
 let currentVal = ""
 let previousVal = ""
+let inputArr = []
 let answer;
 let equalsPressed = false
 
@@ -25,6 +25,11 @@ previous.innerHTML = previousVal
 const append = (num) => {
     if (equalsPressed) {
         allclear()
+    }
+
+    if (currentVal.length >= 18) {
+        alert("Cannot enter more than 18 digits.")
+        return
     }
 
     currentVal += num.toString()
@@ -68,17 +73,18 @@ const operation = (oper) => {
 }
 
 const allclear = () => {
-    inputArr = []
     currentVal = ""
     previousVal = ""
+    inputArr = []
     answer = undefined
+
     current.innerHTML = "0"
     previous.innerHTML = previousVal
 }
 
 const backspace = () => {
     if (equalsPressed) {
-        return
+        shift()
     }
 
     currentVal = currentVal.slice(0, -1)
@@ -111,14 +117,15 @@ const compute = () => {
 
     inputArr.push(currentVal)
     previousVal += currentVal
+    currentVal = ""
 
     let arrStr = inputArr.join("")
     answer = eval(arrStr)
-    currentVal = ""
+
     current.innerHTML = answer
     previous.innerHTML = previousVal
-    equalsPressed = true
 
+    equalsPressed = true
 }
 
 const shift = () => {
@@ -126,11 +133,14 @@ const shift = () => {
         return
     }
 
-    currentVal = answer
+    currentVal = answer.toString()
     previousVal = ""
     inputArr = []
+    
     current.innerHTML = currentVal
     previous.innerHTML = previousVal
+
+    equalsPressed = false
 }
 
 //Event Listeners
