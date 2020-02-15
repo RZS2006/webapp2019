@@ -133,12 +133,13 @@ nav {
 .about-text {
     background-color: white;
     flex: 1;
-    padding: 40px 20px;
+    padding: 30px 20px;
 }
 
 .about-text p {
     line-height: 1.6;
     font-size: 2rem;
+    font-weight: 300;
 }
 
 .about-img {
@@ -206,6 +207,39 @@ nav {
     background-color: black;
     color: white;
     transition: 0.2s;
+}
+
+/*FAQ Section*/
+
+.faq-accordion {
+    margin-bottom: 15px;
+    border: 1px solid rgb(220, 220, 220);
+}
+
+.faq-title {
+    width: 100%;
+    min-height: 60px;
+    text-align: left;
+    font-size: 2rem;
+    padding: 10px 20px;
+    background-color: rgb(240, 240, 240);
+    border: none;
+}
+
+.faq-content {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: white;
+    display: none;
+}
+
+.faq-content.active {
+    display: block;
+}
+
+.faq-content p {
+    font-size: 1.6rem;
+    line-height: 1.5;
 }
 
 /*Footer*/
@@ -292,6 +326,16 @@ footer .container {
 
     .card {
         width: 70%;
+    }
+
+    /*FAQ Media Query*/
+
+    .faq-title {
+        font-size: 1.6rem;
+    }
+
+    .faq-content p {
+        font-size: 1.4rem;
     }
 
     /*Footer Media Query*/
