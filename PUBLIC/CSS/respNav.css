@@ -133,7 +133,7 @@ nav {
     }
 
     .nav-container.active {
-        transform: translateY(300px);
+        transform: translateY(calc(220px + 72px));
     }
 
     .nav-button-container {

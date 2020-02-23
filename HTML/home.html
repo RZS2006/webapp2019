@@ -1,36 +1,55 @@
+<!-- Random Calculator - Home -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="../PUBLIC/CSS/randcalc.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../PUBLIC/CSS/home.css">
+    <script src="https://kit.fontawesome.com/adb4542310.js" crossorigin="anonymous"></script>
     <title>Random Calculator - Home</title>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="../PUBLIC/IMAGE/randcalc-logo.png" alt="logo">
-                <h4>Random Calculator</h4>
-            </div>
-            <nav>
-                <ul class="nav-container">
-                    <li class="nav-link"><a href="randcalc.html" id="current">Home</a></li>
-                    <li class="nav-link"><a href="../HTML/products.html">Products</a></li>
-                    <li class="nav-link"><a href="../HTML/about.html">About</a></li>
-                    <li class="nav-link"><a href="../HTML/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="account-container">
-                <a href="#"><button id="account-btn">My Account</button></a>
-            </div>
-        </div>
-    </header>
 
+    <!-- Header / Navigation -->
+    <div class="header-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header-container">
+                    <div class="logo-container">
+                        <img src="../PUBLIC/IMAGE/randcalc-logo.png" alt="Random Calculator logo">
+                        <h4>Random Calculator</h4>
+                    </div>
+                    <nav class="nav-container">
+                        <ul class="nav-link-container">
+                            <li class="nav-link"><a href="home.html" class="active-link">Home</a></li>
+                            <li class="nav-link"><a href="products.html">Products</a></li>
+                            <li class="nav-link"><a href="about.html">About</a></li>
+                            <li class="nav-link"><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <div class="account-container">
+                            <a href="#"><button class="account-btn"><i class="fas fa-user fa-lg"></i>My Account</button></a>
+                        </div>
+                    </nav>
+                    <div class="burger-container">
+                        <div class="burger">
+                            <div class="burger-bar line1"></div>
+                            <div class="burger-bar line2"></div>
+                            <div class="burger-bar line3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Main -->
     <main>
+
+        <!-- Introduction -->
         <section id="introduction">
             <div class="container">
                 <div class="intro-container">
@@ -41,6 +60,7 @@
             </div>
         </section>
 
+        <!-- Description -->
         <section id="description">
             <div class="container">
                 <div class="section-title">
@@ -71,6 +91,7 @@
             </div>
         </section>
 
+        <!-- Showcase -->
         <section id="showcase">
             <div class="container">
                 <div class="section-title">
@@ -96,6 +117,7 @@
             </div>
         </section>
 
+        <!-- Sign-Up -->
         <section id="sign-up">
             <div class="container">
                 <div class="sign-up-container">
@@ -106,25 +128,32 @@
         </section>
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <div class="footer-nav">
-                <ul>
-                    <li class="fnav-link"><a href="../HTML/products.html">Products</a></li>
-                    <li class="fnav-link"><a href="../HTML/about.html">About</a></li>
-                    <li class="fnav-link"><a href="../HTML/contact.html">Contact</a></li>
-                    <li class="fnav-link"><a href="#">My Account</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <ul>
-                    <li><a href="#"> <img src="../PUBLIC/IMAGE/youtube-icon.png" alt="youtube"> </a></li>
-                    <li><a href="#"> <img src="../PUBLIC/IMAGE/instagram-icon.png" alt="instagram"> </a></li>
-                    <li><a href="#"> <img src="../PUBLIC/IMAGE/facebook-icon.png" alt="facebook"> </a></li>
-                    <li><a href="#"> <img src="../PUBLIC/IMAGE/twitter-icon.png" alt="twiiter"> </a></li>
-                </ul>
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-top-socialmedia">
+                        <ul>
+                            <li class="socialmedia-link"><a href="#"><i class="fab fa-facebook fa-3x"></i></a></li>
+                            <li class="socialmedia-link"><a href="#"><i class="fab fa-youtube fa-3x"></i></a></li>
+                            <li class="socialmedia-link"><a href="#"><i class="fab fa-twitter fa-3x"></i></a></li>
+                            <li class="socialmedia-link"><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-support">
+                        <ul>
+                            <li class="support-link"><a href="#">Privacy Policy</a></li>
+                            <li class="support-link"><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom-copyright">© 2020 Random Calculator.</div>
+                </div>
             </div>
         </div>
     </footer>
 </body>
+<script src="../PUBLIC/JS/respNav.js"></script>
 </html>
