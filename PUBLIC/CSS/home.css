@@ -133,55 +133,65 @@ a {
 }
 
 
-/*Introduction Section*/
+/* Hero Section */
 
-#introduction {
-    background-image: url(../IMAGE/mountain-pic.jpg);
-    background-size: cover;
-    background-position: center;
+.hero {
+    background: center/cover url(../IMAGE/mountain-pic.jpg);
     height: calc(100vh - 72px);
     min-height: 440px;
 }
 
-.intro-container{
+.hero-container{
     width: 60%;
-    padding: 100px 40px;
+    padding: 100px 20px;
 }
 
-#introduction h4 {
-    font-size: 4rem;
-    text-shadow: 2px 2px 5px rgba(20, 20, 20, 0.6);
-    text-align: left;
+.hero-container h4 {
     color: white;
+    font-size: 4.2rem;
     text-transform: capitalize;
 }
 
-#introduction p {
-    margin-top: 20px;
-    font-size: 1.8rem;
-    text-shadow: 2px 2px 5px rgba(20, 20, 20, 0.6);
+.hero-container p {
     color: white;
-    text-align: left;
+    margin-top: 10px;
+    font-size: 1.8rem;
 }
 
-#intro-btn {
-    border: 1px white solid;
-    color: white;
-    font-size: 2rem;
+.hero-button-container {
     margin-top: 20px;
-    background-color: transparent;
-    text-align: center;
-    line-height: 50px;
-    width: 150px;
+    display: flex;
+}
+
+.hero-button {
     height: 50px;
+    width: 180px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.8rem;
     cursor: pointer;
 }
 
-#intro-btn:hover {
-    background-color: black;
+.hero-button.btn-primary {
     color: white;
-    opacity: 0.8;
-    border: 1px black solid;
+    background-color: black;
+}
+
+.hero-button.btn-secondary {
+    color: white;
+    background-color: transparent;
+    border: white 2px solid;
+}
+
+.hero-button.btn-primary:hover {
+    background-color: rgb(10, 10, 10);
+    transition: 0.2s;
+}
+
+.hero-button.btn-secondary:hover {
+    background-color: black;
+    border-color: black;
     transition: 0.2s;
 }
 
@@ -430,6 +440,10 @@ a {
     color: rgb(40, 40, 40);
 }
 
+
+
+/*Tablet Media Queries*/
+
 @media screen and (max-width: 768px) {
 
     /* Header Media Query */
@@ -497,16 +511,20 @@ a {
         transform: rotate(225deg) translate(6px, 5px);
     }
 
-    /*Introduction Section Media Query*/
+    /* Hero Section Media Query */
 
-    .intro-container {
+    .hero-container {
         width: 100%;
-        padding: 60px 20px;
+        padding: 40px 20px;
         text-align: center;
     }
 
-    #introduction h4, #introduction p {
+    .hero-container h4, .hero-container p {
         text-align: center;
+    }
+
+    .hero-button-container {
+        justify-content: center;
     }
 
     /*Description Section Media Query*/
@@ -537,5 +555,30 @@ a {
 
     #sign-up button {
         margin: 20px auto;
+    }
+}
+
+
+/*Phone Media Queries*/
+
+@media screen and (max-width: 600px) {
+    * {
+        font-size: 9px;
+    }
+
+    .hero-container h4 {
+        font-size: 3.2rem;
+    }
+
+    .hero-container {
+        padding: 30px 10px;
+    }
+
+    .hero-button-container {
+        flex-direction: column;
+    }
+
+    .hero-button {
+        margin: 8px 0;
     }
 }
