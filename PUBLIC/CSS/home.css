@@ -12,7 +12,7 @@ body, button {
 }
 
 body {
-    background: #FAFAFA;
+    background: rgb(250, 250, 250);
 }
 
 .container {
@@ -198,146 +198,115 @@ a {
 /*Description Section*/
 
 .section-title {
-    width: 100%;
-    margin: 60px 0 40px 0;
-    text-align: center;  
+    padding: 80px 0 40px 0;
+    text-align: center;
 }
 
 .section-title h4 {
-    letter-spacing: 2px;
-    font-weight: 300;
-    font-size: 4rem;
+    letter-spacing: 3px;
+    font-weight: 4;
+    font-size: 4.8rem;
     text-transform: uppercase;
 }
 
-.section-title h4 span {
-    font-weight: 500;
-    font-size: 4rem;
+.description-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
 }
 
-.desc-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.description-item {
+    width: 95%;
+    padding: 30px;
+    height: auto;
+    text-align: center;
+    border-radius: 8px;
 }
 
-.desc-item {
-    width: 40%;
-    margin: 20px;
-    min-width: 280px;
-    padding: 20px;
-    height: 320px;
-    background-color: white;
-    box-shadow: 5px 5px 20px rgba(20, 20, 20, 0.2);
-}
-
-.desc-item:hover {
-    box-shadow: 10px 10px 40px rgba(20, 20, 20, 0.4);
+.description-item:hover {
+    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.2);
     transition: 0.4s;
 }
 
-.desc-item h4 {
+.description-item h4 {
+    margin-top: 20px;
     text-transform: uppercase;
     letter-spacing: 8px;
-    text-align: center;
-    font-size: 2.8rem;
-    font-weight: 300;
-    padding: 10px;
-    border-bottom: 1px solid black; 
+    font-weight: 500;
+    font-size: 3rem;
 }
 
-.desc-item p {
-    text-align: center;
+.description-item p {
+    margin-top: 10px;
     font-size: 1.6rem;
-    margin-top: 20px;
-}
-
-.desc-item img {
-    display: block;
-    width: 25%;
-    min-width: 100px;
-    margin: 20px auto;
+    color: rgb(60, 60, 60);
 }
 
 /*Showcase Section*/
 
-.show-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.showcase-item-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
 }
 
-.show-item {
-    width: 40%;
-    margin: 20px;
-    min-width: 280px;
-    padding: 20px;
+.showcase-item {
+    width: 95%;
+    padding: 30px 20px;
+    height: auto;
     text-align: center;
-    height: 400px;
     background-color: white;
-    box-shadow: 5px 5px 20px rgba(20, 20, 20, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.2);
 }
 
-.show-item img {
-    display: block;
-    max-height: 25%;
-    max-width: 40%;
-    margin: 20px auto;
-}
-
-.show-item h4 {
-    font-size: 2.8rem;
-    text-align: center;
-    margin: 10px auto;
+.showcase-item h4 {
+    font-size: 2rem;
+    margin-top: 20px;
     font-weight: 500;
 }
 
-.show-item p {
-    font-size: 1.8rem;
-    font-weight: 300;
-    text-align: center;
+.showcase-item p {
+    font-size: 1.6rem;
+    margin-top: 10px;
+    color: rgb(60, 60, 60);
 }
 
-.show-item button {
-    display: block;
-    margin: 40px auto;
-    width: 50%;
-    min-width: 180px;
-    max-width: 240px;
-    height: 50px;
+.showcase-item button {
+    margin-top: 20px;
+    width: 120px;
+    height: 40px;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     cursor: pointer;
-    background-color: transparent;
-    color: black;
-    border: black 1px solid;
-}
-
-.show-item button:hover {
+    border-radius: 4px;
     background-color: black;
     color: white;
+    border: none;
+}
+
+.showcase-item button:hover {
+    background-color: rgb(20, 20, 20);
     transition: 0.2s;
 }
 
-.show-btn {
+.showcase-button-container {
     display: flex;
     justify-content: center;
-    margin: 20px auto 40px auto;
+    padding: 40px 0 80px;
 }
 
-.show-btn button {
+.showcase-button {
     width: 200px;
     height: 50px;
     font-size: 2rem;
     background-color: transparent;
     border: black 1px solid;
     cursor: pointer;
-    font-size: 300;
+    border-radius: 4px;
 }
 
-.show-btn button:hover {
+.showcase-button:hover {
     background-color: black;
     color: white;
     transition: 0.2s;
@@ -529,22 +498,34 @@ a {
 
     /*Description Section Media Query*/
 
-    .desc-item {
-        width: 100%;
-    }
-
     .section-title {
-        margin: 40px 0 20px 0;
+        padding: 40px 0 20px 0;
     }
 
-    .section-title h4, .section-title h4 span {
-        font-size: 3.4rem;
+    .section-title h4 {
+        font-size: 3.6rem;
     } 
+
+    .description-container {
+        grid-template-columns: 1fr;
+    }
+
+    .description-item {
+        margin: 10px 0;
+    }
 
     /*Showcase Section Media Query*/
 
-    .show-item {
-        width: 100%;
+    .showcase-item-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .showcase-item {
+        margin: 10px 0;
+    }
+
+    .showcase-button-container {
+        padding: 20px 0 40px;
     }
 
     /*Sign-up Section Media Query*/
@@ -562,9 +543,12 @@ a {
 /*Phone Media Queries*/
 
 @media screen and (max-width: 600px) {
+
     * {
         font-size: 9px;
     }
+
+    /*Hero Section Media Query*/
 
     .hero-container h4 {
         font-size: 3.2rem;
@@ -580,5 +564,11 @@ a {
 
     .hero-button {
         margin: 8px 0;
+    }
+
+    /*Showcase Section Media Query*/
+
+    .showcase-item-container {
+        grid-template-columns: 1fr;
     }
 }
