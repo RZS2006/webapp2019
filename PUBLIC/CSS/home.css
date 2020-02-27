@@ -181,11 +181,11 @@ a {
 .hero-button.btn-secondary {
     color: white;
     background-color: transparent;
-    border: white 2px solid;
+    border: white 1px solid;
 }
 
 .hero-button.btn-primary:hover {
-    background-color: rgb(10, 10, 10);
+    background-color: rgb(20, 20, 20);
     transition: 0.2s;
 }
 
@@ -209,7 +209,7 @@ a {
     text-transform: uppercase;
 }
 
-.description-container {
+.description-item-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
@@ -224,7 +224,8 @@ a {
 }
 
 .description-item:hover {
-    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.2);
+    background-color: rgb(252, 252, 252);
+    box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
     transition: 0.4s;
 }
 
@@ -257,7 +258,7 @@ a {
     text-align: center;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
 }
 
 .showcase-item h4 {
@@ -314,41 +315,93 @@ a {
 
 /*Sign-up Section*/
 
-#sign-up {
-    background-image: url(../IMAGE/skymount-pic.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 30vw;
-    min-height: 300px;
+.sign-up {
+    background: rgb(240, 240, 240);
+    height: auto;
 }
 
-.sign-up-container {
-    padding: 40px;
-}
-
-#sign-up h4 {
-    font-size: 3rem;;
+.sign-up-container, .mobile-container {
+    padding: 40px 20px;
     text-align: center;
-    color: black;
-    font-weight: 300;
 }
 
-#sign-up button {
-    display: block;
-    margin: 60px auto;
-    width: 200px;
-    height: 50px;
-    border: black 1px solid;
-    font-size: 2rem;
+.sign-up-container h4, .mobile-container h4 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.sign-up-container p, .mobile-container p {
+    font-size: 1.8rem;
+    color: rgb(60, 60, 60);
+    margin-top: 5px;
+}
+
+.sign-up-button-container, .mobile-button-container {
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.sign-up-button, .mobile-button {
+    margin: 0 10px;
+    width: 160px;
+    height: 45px;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.2);
 }
 
-#sign-up button:hover {
-    background-color: black;
+.sign-up-button.btn-primary {
     color: white;
+    background-color: black;
+}
+
+.sign-up-button.btn-secondary {
+    background-color: transparent;
+    border: black 1px solid;
+}
+
+.sign-up-button.btn-primary:hover {
+    background-color: rgb(20, 20, 20);
     transition: 0.2s;
-    opacity: 0.8;
+}
+
+.sign-up-button.btn-secondary:hover {
+    color: white;
+    background-color: black;
+    transition: 0.2s;
+}
+
+/* Mobile Section */
+
+.mobile {
+    background: rgb(40, 40, 40);
+    height: auto;
+}
+
+.mobile-container h4 {
+    color: white;
+}
+
+.mobile-container p {
+    color: rgb(220, 220, 220);
+}
+
+.mobile-button {
+    background-color: transparent;
+    border: 1px white solid;
+    color: white;
+}
+
+.mobile-button:hover {
+    background-color: black;
+    border-color: black;
+    transition: 0.2s;
+}
+
+.mobile-button i {
+    margin-right: 5px;
 }
 
 /*Footer*/
@@ -506,7 +559,7 @@ a {
         font-size: 3.6rem;
     } 
 
-    .description-container {
+    .description-item-container {
         grid-template-columns: 1fr;
     }
 
@@ -527,17 +580,8 @@ a {
     .showcase-button-container {
         padding: 20px 0 40px;
     }
-
-    /*Sign-up Section Media Query*/
-
-    #sign-up h4 {
-        font-size: 2.4rem;
-    }
-
-    #sign-up button {
-        margin: 20px auto;
-    }
 }
+
 
 
 /*Phone Media Queries*/
@@ -570,5 +614,23 @@ a {
 
     .showcase-item-container {
         grid-template-columns: 1fr;
+    }
+
+    /* Sign Up Section / Mobile Section Media Query */
+
+    .sign-up-container h4, .mobile-container h4 {
+        font-size: 3rem;
+    }
+
+    .sign-up-container, .mobile-container {
+        padding: 20px 10px
+    }
+
+    .sign-up-button-container, .mobile-button-container {
+        flex-direction: column;
+    }
+
+    .sign-up-button, .mobile-button {
+        margin: 8px 0;
     }
 }
