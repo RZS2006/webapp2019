@@ -10,12 +10,13 @@ Web development with CSS and JS
 ### index.html
 This is signup page.
 
-##Random Calculator
-###Home Page
-###Products Page
-###About Page
+## Random Calculator
+### Home Page
+### Products Page
+### About Page
+### Contact Page
 
-###Temperature Convertor
-###Area Calculator
-###Calculator
+### Temperature Convertor
+### Area Calculator
+### Calculator
 
