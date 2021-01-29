@@ -1,6 +1,9 @@
 # webapp2019
-Web development with CSS and JS
+First repository. Learning the basics of web development.
 
+*30.12.2020 - 27.02.2020*
+
+> Legacy README.md
 ## Folders:
 ### HTML
 ### PUBLIC
